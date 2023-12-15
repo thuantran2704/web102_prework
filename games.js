@@ -1,5 +1,5 @@
 // Image credits: Kickstarter
-//testing
+//pledged: money funded,, backers are number of pp backing it.
 const games = ` [
   {
     "name": "Heroes Of Mythic Americas",
