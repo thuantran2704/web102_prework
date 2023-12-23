@@ -152,7 +152,7 @@ const unfundedRaised = totalUnfundedArr.reduce((total,game) => total + game.pled
 
 
 // create a string that explains the number of unfunded games using the ternary operator
-const totalUnfundedString = totalUnfundedNum > 0 ? `We have raised $${unfundedRaised.toLocaleString("en-US")} currently ${totalUnfundedNum} game${totalUnfundedNum>1?"s":""} are unfundedRaised. We need your help to fund these games`: "All games are funded!";
+const totalUnfundedString = totalUnfundedNum > 0 ? `We have raised $${unfundedRaised.toLocaleString("en-US")} currently ${totalUnfundedNum} game${totalUnfundedNum>1?"s":""} have not met its goal. We need your help to fund these games`: "All games are funded!";
 
 // create a new DOM element containing the template string and append it to the description container
 const descriptionEle = document.createElement("p");
