@@ -45,15 +45,15 @@ function addGamesToPage(games) {
 
 
         gameCard.innerHTML = `
-        <img src="${game.img}" alt="${game.name}'s image" class="game-img" />
         <h3>${game.name}</h3>
+        <img src="${game.img}" alt="${game.name}'s image" class="game-img" />
+       
         <p>Description: ${game.description}</p>
-        <p>Pledged: $${game.pledged}</p>
-        <p>Goal: $${game.goal}</p>
+        <p>Backer: ${game.backers}</p>
         `;
         // append the game to the games-container
 
-        document.getElementById("games-container").appendChild(gameCard);
+        gamesContainer.appendChild(gameCard);
     }
 }
 
@@ -179,7 +179,39 @@ const firstEle = document.createElement("p")
 firstEle.innerHTML = `${mostFundedGame.name}`;
 firstGameContainer.appendChild(firstEle);
 
+
 // do the same for the runner up item
 const secondEle = document.createElement("p")
 secondEle.innerHTML = `${secondMostFundedGame.name}`;
 secondGameContainer.appendChild(secondEle);
+
+let isToggled = false;
+firstGameContainer.addEventListener("click", function(){
+    let game = mostFundedGame;
+
+    firstGameContainer.innerHTML = isToggled ? `
+    <img src="${game.img}" alt="${game.name}'s image" class="game-img" />
+    <p>Description: ${game.description}</p>
+    <p>Raised: $${game.pledged}</p>
+    <p>Goal: $${game.goal}</p>
+    ` :`
+    <h3>🥇 Top Funded Game</h3>
+    <p>${mostFundedGame.name}</p>
+    `;
+    isToggled = !isToggled;
+} );
+let isToggled2 = false;
+secondGameContainer.addEventListener("click", function(){
+    let game = secondMostFundedGame;
+    secondGameContainer.innerHTML = isToggled2 ? `
+    <p>Description: ${game.description}</p>
+    <img src="${game.img}" alt="${game.name}'s image" class="game-img" />
+
+    <p>Raised: $${game.pledged}</p>
+    <p>Goal: $${game.goal}</p>
+    ` :`
+    <h3>🥈 Runner Up</h3>
+    <p>${secondMostFundedGame.name}</p>
+    `;
+    isToggled2 = !isToggled2;
+} );
