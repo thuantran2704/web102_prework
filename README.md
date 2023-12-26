@@ -1,4 +1,4 @@
-# WEB102 Prework - *Name of App Here*
+# WEB102 Prework - Sea Monster Info Display 
 
 Submitted by: Thuan Quoc Tran
 
@@ -35,11 +35,11 @@ GIF created with ...  ScreenToGif
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+I have a bit of trouble with some functions like reduce and filter as I am not familiar with them. However with sufficient guidance from Codepath and my own research, I have been able to fully utilize the abovementioned functions.
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright 2023 Thuan Quoc Tran
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
