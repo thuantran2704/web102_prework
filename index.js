@@ -190,8 +190,8 @@ firstGameContainer.addEventListener("click", function(){
     let game = mostFundedGame;
 
     firstGameContainer.innerHTML = isToggled ? `
+    <h3>${game.name}</h3>
     <img src="${game.img}" alt="${game.name}'s image" class="game-img" />
-    <p>Description: ${game.description}</p>
     <p>Raised: $${game.pledged}</p>
     <p>Goal: $${game.goal}</p>
     ` :`
@@ -204,9 +204,8 @@ let isToggled2 = false;
 secondGameContainer.addEventListener("click", function(){
     let game = secondMostFundedGame;
     secondGameContainer.innerHTML = isToggled2 ? `
-    <p>Description: ${game.description}</p>
+    <h3>${game.name}</h3>
     <img src="${game.img}" alt="${game.name}'s image" class="game-img" />
-
     <p>Raised: $${game.pledged}</p>
     <p>Goal: $${game.goal}</p>
     ` :`

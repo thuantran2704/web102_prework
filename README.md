@@ -17,7 +17,8 @@ The following 4 functionality is completed:
 
 The following **optional** features are implemented:
 
-* [ ] List anything else that you can get done to improve the app functionality!
+* [X] List anything else that you can get done to improve the app functionality!
+Add functions that listen to events on the top funded games.
 
 ## Video Walkthrough
 
